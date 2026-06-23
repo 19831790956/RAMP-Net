@@ -99,8 +99,8 @@ Training is performed using model-specific shell scripts. You can find all train
 
 ### Table 1: Quantitative evaluation on the SEVIR dataset\
 
-<div style="width: 100%; overflow-x: auto;">
-<table style="width: 100%; border-collapse: collapse; text-align: center; font-size: 12px; border: 1px solid #ddd; white-space: nowrap;">
+<div style="width: 100%; overflow-x: auto; border: 1px solid #ddd; padding: 10px;">
+  <table style="width: 2600px; border-collapse: collapse; text-align: center; font-size: 13px; font-family: sans-serif;">
   <thead>
     <tr style="background-color: #f2f2f2;">
       <th style="border: 1px solid #ddd; padding: 4px;">Dataset</th><th style="border: 1px solid #ddd; padding: 4px;">Var.</th><th style="border: 1px solid #ddd; padding: 4px;">Missing rate</th><th style="border: 1px solid #ddd; padding: 4px;">Metric</th><th style="border: 1px solid #ddd; padding: 4px;">OK</th><th style="border: 1px solid #ddd; padding: 4px;">LR</th><th style="border: 1px solid #ddd; padding: 4px;">Autoformer</th><th style="border: 1px solid #ddd; padding: 4px;">NS-Trans</th><th style="border: 1px solid #ddd; padding: 4px;">TimesNet</th><th style="border: 1px solid #ddd; padding: 4px;">MPNN</th><th style="border: 1px solid #ddd; padding: 4px;">RAMP-Net (Ours)</th>
