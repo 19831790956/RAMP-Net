@@ -106,23 +106,192 @@ Training is performed using model-specific shell scripts. You can find all train
       <th style="border: 1px solid #ddd; padding: 4px;">Dataset</th><th style="border: 1px solid #ddd; padding: 4px;">Var.</th><th style="border: 1px solid #ddd; padding: 4px;">Missing rate</th><th style="border: 1px solid #ddd; padding: 4px;">Metric</th><th style="border: 1px solid #ddd; padding: 4px;">OK</th><th style="border: 1px solid #ddd; padding: 4px;">LR</th><th style="border: 1px solid #ddd; padding: 4px;">Autoformer</th><th style="border: 1px solid #ddd; padding: 4px;">NS-Trans</th><th style="border: 1px solid #ddd; padding: 4px;">TimesNet</th><th style="border: 1px solid #ddd; padding: 4px;">MPNN</th><th style="border: 1px solid #ddd; padding: 4px;">RAMP-Net (Ours)</th>
     </tr>
   </thead>
-  <tbody>
-    <tr><td rowspan="8" style="border: 1px solid #ddd; padding: 4px;">Guangdong</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">U</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">12.5%</td><td>MAE</td><td>1.237 ± 0.002</td><td>1.074 ± 0.002</td><td>0.556 ± 0.002</td><td>0.526 ± 0.001</td><td>0.498 ± 0.004</td><td><u>0.491</u> ± 0.002</td><td>0.372 ± 0.005</td></tr>
-    <tr><td>R²</td><td>0.074 ± 0.002</td><td>0.259 ± 0.002</td><td>0.696 ± 0.002</td><td>0.702 ± 0.003</td><td>0.727 ± 0.004</td><td><u>0.743</u> ± 0.002</td><td>0.819 ± 0.003</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">U</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">25%</td><td>MAE</td><td>1.238 ± 0.001</td><td>1.077 ± 0.002</td><td>0.593 ± 0.002</td><td>0.573 ± 0.001</td><td><u>0.526</u> ± 0.002</td><td>0.534 ± 0.001</td><td>0.419 ± 0.002</td></tr>
-    <tr><td>R²</td><td>0.075 ± 0.000</td><td>0.258 ± 0.001</td><td>0.668 ± 0.003</td><td>0.673 ± 0.002</td><td>0.710 ± 0.001</td><td><u>0.713</u> ± 0.002</td><td>0.788 ± 0.002</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">U</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">50%</td><td>MAE</td><td>1.238 ± 0.001</td><td>1.076 ± 0.001</td><td>0.694 ± 0.003</td><td>0.670 ± 0.002</td><td><u>0.641</u> ± 0.002</td><td>0.649 ± 0.001</td><td>0.574 ± 0.003</td></tr>
-    <tr><td>R²</td><td>0.073 ± 0.001</td><td>0.258 ± 0.001</td><td>0.580 ± 0.003</td><td>0.600 ± 0.001</td><td><u>0.615</u> ± 0.002</td><td>0.607 ± 0.001</td><td>0.668 ± 0.005</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">U</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">75%</td><td>MAE</td><td>1.237 ± 0.000</td><td>1.076 ± 0.001</td><td>0.908 ± 0.001</td><td>0.801 ± 0.001</td><td><u>0.779</u> ± 0.001</td><td>0.826 ± 0.001</td><td>0.718 ± 0.003</td></tr>
-    <tr><td>R²</td><td>0.074 ± 0.001</td><td>0.257 ± 0.001</td><td>0.415 ± 0.001</td><td>0.500 ± 0.001</td><td><u>0.520</u> ± 0.001</td><td>0.482 ± 0.001</td><td>0.561 ± 0.003</td></tr>
-    <tr><td rowspan="8" style="border: 1px solid #ddd; padding: 4px;">Guangdong</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">V</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">12.5%</td><td>MAE</td><td>1.350 ± 0.002</td><td>1.161 ± 0.003</td><td>0.570 ± 0.003</td><td>0.554 ± 0.004</td><td>0.495 ± 0.005</td><td><u>0.478</u> ± 0.003</td><td>0.368 ± 0.004</td></tr>
-    <tr><td>R²</td><td>0.145 ± 0.002</td><td>0.365 ± 0.003</td><td>0.777 ± 0.001</td><td>0.764 ± 0.005</td><td>0.809 ± 0.004</td><td><u>0.833</u> ± 0.003</td><td>0.872 ± 0.003</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">V</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">25%</td><td>MAE</td><td>1.351 ± 0.001</td><td>1.161 ± 0.002</td><td>0.634 ± 0.005</td><td>0.620 ± 0.002</td><td><u>0.543</u> ± 0.002</td><td>0.546 ± 0.002</td><td>0.440 ± 0.004</td></tr>
-    <tr><td>R²</td><td>0.143 ± 0.002</td><td>0.363 ± 0.002</td><td>0.726 ± 0.004</td><td>0.719 ± 0.002</td><td>0.771 ± 0.001</td><td><u>0.786</u> ± 0.002</td><td>0.826 ± 0.002</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">V</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">50%</td><td>MAE</td><td>1.350 ± 0.001</td><td>1.160 ± 0.002</td><td>0.768 ± 0.002</td><td>0.741 ± 0.001</td><td><u>0.689</u> ± 0.002</td><td>0.691 ± 0.002</td><td>0.626 ± 0.005</td></tr>
-    <tr><td>R²</td><td>0.144 ± 0.002</td><td>0.363 ± 0.001</td><td>0.624 ± 0.002</td><td>0.636 ± 0.002</td><td>0.665 ± 0.002</td><td><u>0.680</u> ± 0.002</td><td>0.707 ± 0.002</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">V</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">75%</td><td>MAE</td><td>1.350 ± 0.000</td><td>1.160 ± 0.000</td><td>1.026 ± 0.003</td><td>0.900 ± 0.001</td><td><u>0.864</u> ± 0.002</td><td>0.927 ± 0.013</td><td>0.782 ± 0.002</td></tr>
-    <tr><td>R²</td><td>0.144 ± 0.001</td><td>0.364 ± 0.002</td><td>0.462 ± 0.003</td><td>0.534 ± 0.001</td><td><u>0.565</u> ± 0.002</td><td>0.525 ± 0.008</td><td>0.613 ± 0.001</td></tr>
+ <tbody>
+    <!-- Guangdong U 12.5% -->
+    <tr>
+      <td rowspan="8" style="border: 1px solid #ddd; padding: 4px;">Guangdong</td>
+      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">U</td>
+      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">12.5%</td>
+      <td>MAE</td>
+      <td>1.237 ± 0.002</td>
+      <td>1.074 ± 0.002</td>
+      <td>0.556 ± 0.002</td>
+      <td>0.526 ± 0.001</td>
+      <td><span style="text-decoration: underline;">0.498</span> ± 0.004</td>
+      <td><span style="text-decoration: underline;">0.491</span> ± 0.002</td>
+      <td><strong>0.372</strong> ± 0.005</td>
+    </tr>
+    <tr>
+      <td>R²</td>
+      <td>0.074 ± 0.002</td>
+      <td>0.259 ± 0.002</td>
+      <td>0.696 ± 0.002</td>
+      <td>0.702 ± 0.003</td>
+      <td>0.727 ± 0.004</td>
+      <td><span style="text-decoration: underline;">0.743</span> ± 0.002</td>
+      <td><strong>0.819</strong> ± 0.003</td>
+    </tr>
+    <!-- Guangdong U 25% -->
+    <tr>
+      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">U</td>
+      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">25%</td>
+      <td>MAE</td>
+      <td>1.238 ± 0.001</td>
+      <td>1.077 ± 0.002</td>
+      <td>0.593 ± 0.002</td>
+      <td>0.573 ± 0.001</td>
+      <td><span style="text-decoration: underline;">0.526</span> ± 0.002</td>
+      <td>0.534 ± 0.001</td>
+      <td><strong>0.419</strong> ± 0.002</td>
+    </tr>
+    <tr>
+      <td>R²</td>
+      <td>0.075 ± 0.000</td>
+      <td>0.258 ± 0.001</td>
+      <td>0.668 ± 0.003</td>
+      <td>0.673 ± 0.002</td>
+      <td>0.710 ± 0.001</td>
+      <td><span style="text-decoration: underline;">0.713</span> ± 0.002</td>
+      <td><strong>0.788</strong> ± 0.002</td>
+    </tr>
+    <!-- Guangdong U 50% -->
+    <tr>
+      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">U</td>
+      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">50%</td>
+      <td>MAE</td>
+      <td>1.238 ± 0.001</td>
+      <td>1.076 ± 0.001</td>
+      <td>0.694 ± 0.003</td>
+      <td>0.670 ± 0.002</td>
+      <td><span style="text-decoration: underline;">0.641</span> ± 0.002</td>
+      <td>0.649 ± 0.001</td>
+      <td><strong>0.574</strong> ± 0.003</td>
+    </tr>
+    <tr>
+      <td>R²</td>
+      <td>0.073 ± 0.001</td>
+      <td>0.258 ± 0.001</td>
+      <td>0.580 ± 0.003</td>
+      <td>0.600 ± 0.001</td>
+      <td><span style="text-decoration: underline;">0.615</span> ± 0.002</td>
+      <td>0.607 ± 0.001</td>
+      <td><strong>0.668</strong> ± 0.005</td>
+    </tr>
+    <!-- Guangdong U 75% -->
+    <tr>
+      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">U</td>
+      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">75%</td>
+      <td>MAE</td>
+      <td>1.237 ± 0.000</td>
+      <td>1.076 ± 0.001</td>
+      <td>0.908 ± 0.001</td>
+      <td>0.801 ± 0.001</td>
+      <td><span style="text-decoration: underline;">0.779</span> ± 0.001</td>
+      <td>0.826 ± 0.001</td>
+      <td><strong>0.718</strong> ± 0.003</td>
+    </tr>
+    <tr>
+      <td>R²</td>
+      <td>0.074 ± 0.001</td>
+      <td>0.257 ± 0.001</td>
+      <td>0.415 ± 0.001</td>
+      <td>0.500 ± 0.001</td>
+      <td><span style="text-decoration: underline;">0.520</span> ± 0.001</td>
+      <td>0.482 ± 0.001</td>
+      <td><strong>0.561</strong> ± 0.003</td>
+    </tr>
+    <!-- Guangdong V 12.5% -->
+    <tr>
+      <td rowspan="8" style="border: 1px solid #ddd; padding: 4px;">Guangdong</td>
+      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">V</td>
+      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">12.5%</td>
+      <td>MAE</td>
+      <td>1.350 ± 0.002</td>
+      <td>1.161 ± 0.003</td>
+      <td>0.570 ± 0.003</td>
+      <td>0.554 ± 0.004</td>
+      <td>0.495 ± 0.005</td>
+      <td><span style="text-decoration: underline;">0.478</span> ± 0.003</td>
+      <td><strong>0.368</strong> ± 0.004</td>
+    </tr>
+    <tr>
+      <td>R²</td>
+      <td>0.145 ± 0.002</td>
+      <td>0.365 ± 0.003</td>
+      <td>0.777 ± 0.001</td>
+      <td>0.764 ± 0.005</td>
+      <td>0.809 ± 0.004</td>
+      <td><span style="text-decoration: underline;">0.833</span> ± 0.003</td>
+      <td><strong>0.872</strong> ± 0.003</td>
+    </tr>
+    <!-- Guangdong V 25% -->
+    <tr>
+      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">V</td>
+      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">25%</td>
+      <td>MAE</td>
+      <td>1.351 ± 0.001</td>
+      <td>1.161 ± 0.002</td>
+      <td>0.634 ± 0.005</td>
+      <td>0.620 ± 0.002</td>
+      <td><span style="text-decoration: underline;">0.543</span> ± 0.002</td>
+      <td>0.546 ± 0.002</td>
+      <td><strong>0.440</strong> ± 0.004</td>
+    </tr>
+    <tr>
+      <td>R²</td>
+      <td>0.143 ± 0.002</td>
+      <td>0.363 ± 0.002</td>
+      <td>0.726 ± 0.004</td>
+      <td>0.719 ± 0.002</td>
+      <td>0.771 ± 0.001</td>
+      <td><span style="text-decoration: underline;">0.786</span> ± 0.002</td>
+      <td><strong>0.826</strong> ± 0.002</td>
+    </tr>
+    <!-- Guangdong V 50% -->
+    <tr>
+      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">V</td>
+      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">50%</td>
+      <td>MAE</td>
+      <td>1.350 ± 0.001</td>
+      <td>1.160 ± 0.002</td>
+      <td>0.768 ± 0.002</td>
+      <td>0.741 ± 0.001</td>
+      <td><span style="text-decoration: underline;">0.689</span> ± 0.002</td>
+      <td>0.691 ± 0.002</td>
+      <td><strong>0.626</strong> ± 0.005</td>
+    </tr>
+    <tr>
+      <td>R²</td>
+      <td>0.144 ± 0.002</td>
+      <td>0.363 ± 0.001</td>
+      <td>0.624 ± 0.002</td>
+      <td>0.636 ± 0.002</td>
+      <td>0.665 ± 0.002</td>
+      <td><span style="text-decoration: underline;">0.680</span> ± 0.002</td>
+      <td><strong>0.707</strong> ± 0.002</td>
+    </tr>
+    <!-- Guangdong V 75% -->
+    <tr>
+      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">V</td>
+      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">75%</td>
+      <td>MAE</td>
+      <td>1.350 ± 0.000</td>
+      <td>1.160 ± 0.000</td>
+      <td>1.026 ± 0.003</td>
+      <td>0.900 ± 0.001</td>
+      <td><span style="text-decoration: underline;">0.864</span> ± 0.002</td>
+      <td>0.927 ± 0.013</td>
+      <td><strong>0.782</strong> ± 0.002</td>
+    </tr>
+    <tr>
+      <td>R²</td>
+      <td>0.144 ± 0.001</td>
+      <td>0.364 ± 0.002</td>
+      <td>0.462 ± 0.003</td>
+      <td>0.534 ± 0.001</td>
+      <td><span style="text-decoration: underline;">0.565</span> ± 0.002</td>
+      <td>0.525 ± 0.008</td>
+      <td><strong>0.613</strong> ± 0.001</td></tr>
     <tr><td rowspan="8" style="border: 1px solid #ddd; padding: 4px;">Guangdong</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">T</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">12.5%</td><td>MAE</td><td>1.439 ± 0.001</td><td>1.056 ± 0.002</td><td>0.304 ± 0.003</td><td>0.205 ± 0.001</td><td><u>0.161</u> ± 0.001</td><td>0.216 ± 0.000</td><td>0.143 ± 0.001</td></tr>
     <tr><td>R²</td><td>0.891 ± 0.000</td><td>0.922 ± 0.001</td><td>0.994 ± 0.000</td><td><u>0.996</u> ± 0.000</td><td>0.997 ± 0.000</td><td><u>0.996</u> ± 0.000</td><td>0.997 ± 0.000</td></tr>
     <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">T</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">25%</td><td>MAE</td><td>1.441 ± 0.002</td><td>1.056 ± 0.002</td><td>0.361 ± 0.004</td><td><u>0.223</u> ± 0.001</td><td>0.182 ± 0.000</td><td>0.256 ± 0.001</td><td>0.197 ± 0.008</td></tr>
