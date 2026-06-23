@@ -98,251 +98,72 @@ Training is performed using model-specific shell scripts. You can find all train
 ## 📈 Experimental Results
 
 ### Table 1: Quantitative evaluation on the SEVIR dataset\
-
-<div style="width: 100%; overflow-x: auto;">
-  <table style="width: 100%; border-collapse: collapse; text-align: center; font-size: 12px; border: 1px solid #ddd; white-space: nowrap;">
-  <thead>
-    <tr style="background-color: #f2f2f2;">
-      <th style="border: 1px solid #ddd; padding: 4px;">Dataset</th><th style="border: 1px solid #ddd; padding: 4px;">Var.</th><th style="border: 1px solid #ddd; padding: 4px;">Missing rate</th><th style="border: 1px solid #ddd; padding: 4px;">Metric</th><th style="border: 1px solid #ddd; padding: 4px;">OK</th><th style="border: 1px solid #ddd; padding: 4px;">LR</th><th style="border: 1px solid #ddd; padding: 4px;">Autoformer</th><th style="border: 1px solid #ddd; padding: 4px;">NS-Trans</th><th style="border: 1px solid #ddd; padding: 4px;">TimesNet</th><th style="border: 1px solid #ddd; padding: 4px;">MPNN</th><th style="border: 1px solid #ddd; padding: 4px;">RAMP-Net (Ours)</th>
-    </tr>
-  </thead>
- <tbody>
-    <!-- Guangdong U 12.5% -->
-    <tr>
-      <td rowspan="8" style="border: 1px solid #ddd; padding: 4px;">Guangdong</td>
-      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">U</td>
-      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">12.5%</td>
-      <td>MAE</td>
-      <td>1.237 ± 0.002</td>
-      <td>1.074 ± 0.002</td>
-      <td>0.556 ± 0.002</td>
-      <td>0.526 ± 0.001</td>
-      <td><span style="text-decoration: underline;">0.498</span> ± 0.004</td>
-      <td><span style="text-decoration: underline;">0.491</span> ± 0.002</td>
-      <td><strong>0.372</strong> ± 0.005</td>
-    </tr>
-    <tr>
-      <td>R²</td>
-      <td>0.074 ± 0.002</td>
-      <td>0.259 ± 0.002</td>
-      <td>0.696 ± 0.002</td>
-      <td>0.702 ± 0.003</td>
-      <td>0.727 ± 0.004</td>
-      <td><span style="text-decoration: underline;">0.743</span> ± 0.002</td>
-      <td><strong>0.819</strong> ± 0.003</td>
-    </tr>
-    <!-- Guangdong U 25% -->
-    <tr>
-      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">U</td>
-      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">25%</td>
-      <td>MAE</td>
-      <td>1.238 ± 0.001</td>
-      <td>1.077 ± 0.002</td>
-      <td>0.593 ± 0.002</td>
-      <td>0.573 ± 0.001</td>
-      <td><span style="text-decoration: underline;">0.526</span> ± 0.002</td>
-      <td>0.534 ± 0.001</td>
-      <td><strong>0.419</strong> ± 0.002</td>
-    </tr>
-    <tr>
-      <td>R²</td>
-      <td>0.075 ± 0.000</td>
-      <td>0.258 ± 0.001</td>
-      <td>0.668 ± 0.003</td>
-      <td>0.673 ± 0.002</td>
-      <td>0.710 ± 0.001</td>
-      <td><span style="text-decoration: underline;">0.713</span> ± 0.002</td>
-      <td><strong>0.788</strong> ± 0.002</td>
-    </tr>
-    <!-- Guangdong U 50% -->
-    <tr>
-      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">U</td>
-      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">50%</td>
-      <td>MAE</td>
-      <td>1.238 ± 0.001</td>
-      <td>1.076 ± 0.001</td>
-      <td>0.694 ± 0.003</td>
-      <td>0.670 ± 0.002</td>
-      <td><span style="text-decoration: underline;">0.641</span> ± 0.002</td>
-      <td>0.649 ± 0.001</td>
-      <td><strong>0.574</strong> ± 0.003</td>
-    </tr>
-    <tr>
-      <td>R²</td>
-      <td>0.073 ± 0.001</td>
-      <td>0.258 ± 0.001</td>
-      <td>0.580 ± 0.003</td>
-      <td>0.600 ± 0.001</td>
-      <td><span style="text-decoration: underline;">0.615</span> ± 0.002</td>
-      <td>0.607 ± 0.001</td>
-      <td><strong>0.668</strong> ± 0.005</td>
-    </tr>
-    <!-- Guangdong U 75% -->
-    <tr>
-      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">U</td>
-      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">75%</td>
-      <td>MAE</td>
-      <td>1.237 ± 0.000</td>
-      <td>1.076 ± 0.001</td>
-      <td>0.908 ± 0.001</td>
-      <td>0.801 ± 0.001</td>
-      <td><span style="text-decoration: underline;">0.779</span> ± 0.001</td>
-      <td>0.826 ± 0.001</td>
-      <td><strong>0.718</strong> ± 0.003</td>
-    </tr>
-    <tr>
-      <td>R²</td>
-      <td>0.074 ± 0.001</td>
-      <td>0.257 ± 0.001</td>
-      <td>0.415 ± 0.001</td>
-      <td>0.500 ± 0.001</td>
-      <td><span style="text-decoration: underline;">0.520</span> ± 0.001</td>
-      <td>0.482 ± 0.001</td>
-      <td><strong>0.561</strong> ± 0.003</td>
-    </tr>
-    <!-- Guangdong V 12.5% -->
-    <tr>
-      <td rowspan="8" style="border: 1px solid #ddd; padding: 4px;">Guangdong</td>
-      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">V</td>
-      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">12.5%</td>
-      <td>MAE</td>
-      <td>1.350 ± 0.002</td>
-      <td>1.161 ± 0.003</td>
-      <td>0.570 ± 0.003</td>
-      <td>0.554 ± 0.004</td>
-      <td>0.495 ± 0.005</td>
-      <td><span style="text-decoration: underline;">0.478</span> ± 0.003</td>
-      <td><strong>0.368</strong> ± 0.004</td>
-    </tr>
-    <tr>
-      <td>R²</td>
-      <td>0.145 ± 0.002</td>
-      <td>0.365 ± 0.003</td>
-      <td>0.777 ± 0.001</td>
-      <td>0.764 ± 0.005</td>
-      <td>0.809 ± 0.004</td>
-      <td><span style="text-decoration: underline;">0.833</span> ± 0.003</td>
-      <td><strong>0.872</strong> ± 0.003</td>
-    </tr>
-    <!-- Guangdong V 25% -->
-    <tr>
-      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">V</td>
-      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">25%</td>
-      <td>MAE</td>
-      <td>1.351 ± 0.001</td>
-      <td>1.161 ± 0.002</td>
-      <td>0.634 ± 0.005</td>
-      <td>0.620 ± 0.002</td>
-      <td><span style="text-decoration: underline;">0.543</span> ± 0.002</td>
-      <td>0.546 ± 0.002</td>
-      <td><strong>0.440</strong> ± 0.004</td>
-    </tr>
-    <tr>
-      <td>R²</td>
-      <td>0.143 ± 0.002</td>
-      <td>0.363 ± 0.002</td>
-      <td>0.726 ± 0.004</td>
-      <td>0.719 ± 0.002</td>
-      <td>0.771 ± 0.001</td>
-      <td><span style="text-decoration: underline;">0.786</span> ± 0.002</td>
-      <td><strong>0.826</strong> ± 0.002</td>
-    </tr>
-    <!-- Guangdong V 50% -->
-    <tr>
-      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">V</td>
-      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">50%</td>
-      <td>MAE</td>
-      <td>1.350 ± 0.001</td>
-      <td>1.160 ± 0.002</td>
-      <td>0.768 ± 0.002</td>
-      <td>0.741 ± 0.001</td>
-      <td><span style="text-decoration: underline;">0.689</span> ± 0.002</td>
-      <td>0.691 ± 0.002</td>
-      <td><strong>0.626</strong> ± 0.005</td>
-    </tr>
-    <tr>
-      <td>R²</td>
-      <td>0.144 ± 0.002</td>
-      <td>0.363 ± 0.001</td>
-      <td>0.624 ± 0.002</td>
-      <td>0.636 ± 0.002</td>
-      <td>0.665 ± 0.002</td>
-      <td><span style="text-decoration: underline;">0.680</span> ± 0.002</td>
-      <td><strong>0.707</strong> ± 0.002</td>
-    </tr>
-    <!-- Guangdong V 75% -->
-    <tr>
-      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">V</td>
-      <td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">75%</td>
-      <td>MAE</td>
-      <td>1.350 ± 0.000</td>
-      <td>1.160 ± 0.000</td>
-      <td>1.026 ± 0.003</td>
-      <td>0.900 ± 0.001</td>
-      <td><span style="text-decoration: underline;">0.864</span> ± 0.002</td>
-      <td>0.927 ± 0.013</td>
-      <td><strong>0.782</strong> ± 0.002</td>
-    </tr>
-    <tr>
-      <td>R²</td>
-      <td>0.144 ± 0.001</td>
-      <td>0.364 ± 0.002</td>
-      <td>0.462 ± 0.003</td>
-      <td>0.534 ± 0.001</td>
-      <td><span style="text-decoration: underline;">0.565</span> ± 0.002</td>
-      <td>0.525 ± 0.008</td>
-      <td><strong>0.613</strong> ± 0.001</td></tr>
-    <tr><td rowspan="8" style="border: 1px solid #ddd; padding: 4px;">Guangdong</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">T</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">12.5%</td><td>MAE</td><td>1.439 ± 0.001</td><td>1.056 ± 0.002</td><td>0.304 ± 0.003</td><td>0.205 ± 0.001</td><td><u>0.161</u> ± 0.001</td><td>0.216 ± 0.000</td><td>0.143 ± 0.001</td></tr>
-    <tr><td>R²</td><td>0.891 ± 0.000</td><td>0.922 ± 0.001</td><td>0.994 ± 0.000</td><td><u>0.996</u> ± 0.000</td><td>0.997 ± 0.000</td><td><u>0.996</u> ± 0.000</td><td>0.997 ± 0.000</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">T</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">25%</td><td>MAE</td><td>1.441 ± 0.002</td><td>1.056 ± 0.002</td><td>0.361 ± 0.004</td><td><u>0.223</u> ± 0.001</td><td>0.182 ± 0.000</td><td>0.256 ± 0.001</td><td>0.197 ± 0.008</td></tr>
-    <tr><td>R²</td><td>0.891 ± 0.000</td><td>0.922 ± 0.000</td><td>0.993 ± 0.000</td><td><u>0.996</u> ± 0.000</td><td>0.997 ± 0.000</td><td>0.995 ± 0.000</td><td>0.997 ± 0.000</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">T</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">50%</td><td>MAE</td><td>1.442 ± 0.001</td><td>1.057 ± 0.001</td><td>0.502 ± 0.003</td><td><u>0.303</u> ± 0.001</td><td>0.268 ± 0.001</td><td>0.381 ± 0.001</td><td>0.336 ± 0.015</td></tr>
-    <tr><td>R²</td><td>0.891 ± 0.000</td><td>0.922 ± 0.001</td><td>0.987 ± 0.000</td><td>0.994 ± 0.000</td><td>0.994 ± 0.000</td><td>0.992 ± 0.000</td><td><u>0.993</u> ± 0.001</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">T</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">75%</td><td>MAE</td><td>1.442 ± 0.001</td><td>1.057 ± 0.001</td><td>1.645 ± 0.048</td><td><u>0.599</u> ± 0.002</td><td>0.639 ± 0.005</td><td>0.938 ± 0.262</td><td>0.470 ± 0.004</td></tr>
-    <tr><td>R²</td><td>0.891 ± 0.000</td><td>0.922 ± 0.001</td><td>0.862 ± 0.012</td><td><u>0.983</u> ± 0.000</td><td>0.982 ± 0.000</td><td>0.963 ± 0.022</td><td>0.988 ± 0.000</td></tr>
-    <tr><td rowspan="8" style="border: 1px solid #ddd; padding: 4px;">Guangdong</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">P</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">12.5%</td><td>MAE</td><td>0.580 ± 0.001</td><td>0.394 ± 0.002</td><td>0.171 ± 0.003</td><td>0.109 ± 0.001</td><td>0.066 ± 0.001</td><td><u>0.058</u> ± 0.000</td><td>0.048 ± 0.003</td></tr>
-    <tr><td>R²</td><td>0.983 ± 0.000</td><td>0.988 ± 0.000</td><td><u>0.999</u> ± 0.000</td><td><u>0.999</u> ± 0.000</td><td>1.000 ± 0.000</td><td>1.000 ± 0.000</td><td>1.000 ± 0.000</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">P</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">25%</td><td>MAE</td><td>0.580 ± 0.001</td><td>0.393 ± 0.001</td><td>0.201 ± 0.002</td><td>0.113 ± 0.000</td><td>0.079 ± 0.000</td><td>0.084 ± 0.000</td><td><u>0.081</u> ± 0.007</td></tr>
-    <tr><td>R²</td><td>0.983 ± 0.000</td><td>0.988 ± 0.000</td><td>0.998 ± 0.000</td><td><u>0.999</u> ± 0.000</td><td>1.000 ± 0.000</td><td>1.000 ± 0.000</td><td>1.000 ± 0.000</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">P</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">50%</td><td>MAE</td><td>0.581 ± 0.000</td><td>0.394 ± 0.001</td><td>0.277 ± 0.002</td><td>0.147 ± 0.001</td><td>0.127 ± 0.000</td><td>0.161 ± 0.002</td><td><u>0.143</u> ± 0.008</td></tr>
-    <tr><td>R²</td><td>0.983 ± 0.000</td><td>0.988 ± 0.000</td><td>0.997 ± 0.000</td><td>0.999 ± 0.000</td><td>0.999 ± 0.000</td><td>0.999 ± 0.000</td><td>0.999 ± 0.000</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">P</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">75%</td><td>MAE</td><td>0.581 ± 0.000</td><td>0.394 ± 0.001</td><td>1.799 ± 0.119</td><td>0.302 ± 0.002</td><td><u>0.314</u> ± 0.005</td><td>0.683 ± 0.098</td><td>0.388 ± 0.019</td></tr>
-    <tr><td>R²</td><td>0.983 ± 0.000</td><td>0.988 ± 0.000</td><td>0.853 ± 0.019</td><td>0.996 ± 0.000</td><td>0.993 ± 0.001</td><td>0.985 ± 0.004</td><td><u>0.994</u> ± 0.000</td></tr>
-    <tr><td rowspan="8" style="border: 1px solid #ddd; padding: 4px;">California</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">U</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">12.5%</td><td>MAE</td><td>1.603 ± 0.002</td><td>1.327 ± 0.003</td><td>0.984 ± 0.002</td><td>0.944 ± 0.002</td><td>0.978 ± 0.002</td><td><u>0.927</u> ± 0.002</td><td>0.890 ± 0.002</td></tr>
-    <tr><td>R²</td><td>0.228 ± 0.001</td><td>0.422 ± 0.001</td><td>0.670 ± 0.001</td><td>0.689 ± 0.001</td><td>0.670 ± 0.001</td><td><u>0.702</u> ± 0.001</td><td>0.715 ± 0.001</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">U</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">25%</td><td>MAE</td><td>1.603 ± 0.001</td><td>1.329 ± 0.001</td><td>1.009 ± 0.001</td><td>0.971 ± 0.000</td><td>0.999 ± 0.001</td><td><u>0.954</u> ± 0.001</td><td>0.914 ± 0.001</td></tr>
-    <tr><td>R²</td><td>0.229 ± 0.002</td><td>0.421 ± 0.001</td><td>0.653 ± 0.001</td><td>0.673 ± 0.001</td><td>0.657 ± 0.001</td><td><u>0.686</u> ± 0.000</td><td>0.703 ± 0.001</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">U</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">50%</td><td>MAE</td><td>1.602 ± 0.001</td><td>1.328 ± 0.001</td><td>1.090 ± 0.000</td><td>1.029 ± 0.001</td><td>1.061 ± 0.001</td><td><u>1.022</u> ± 0.001</td><td>0.998 ± 0.002</td></tr>
-    <tr><td>R²</td><td>0.229 ± 0.001</td><td>0.422 ± 0.001</td><td>0.601 ± 0.001</td><td>0.636 ± 0.001</td><td>0.616 ± 0.001</td><td><u>0.643</u> ± 0.001</td><td>0.657 ± 0.001</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">U</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">75%</td><td>MAE</td><td>1.603 ± 0.000</td><td>1.328 ± 0.000</td><td>1.219 ± 0.003</td><td><u>1.084</u> ± 0.001</td><td>1.104 ± 0.001</td><td>1.092 ± 0.002</td><td>1.043 ± 0.002</td></tr>
-    <tr><td>R²</td><td>0.229 ± 0.001</td><td>0.421 ± 0.001</td><td>0.499 ± 0.003</td><td>0.583 ± 0.001</td><td>0.569 ± 0.002</td><td><u>0.593</u> ± 0.001</td><td>0.614 ± 0.002</td></tr>
-    <tr><td rowspan="8" style="border: 1px solid #ddd; padding: 4px;">California</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">V</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">12.5%</td><td>MAE</td><td>1.719 ± 0.002</td><td>1.370 ± 0.002</td><td>0.977 ± 0.001</td><td>0.936 ± 0.001</td><td>0.971 ± 0.001</td><td><u>0.918</u> ± 0.001</td><td>0.882 ± 0.001</td></tr>
-    <tr><td>R²</td><td>0.130 ± 0.003</td><td>0.410 ± 0.001</td><td>0.686 ± 0.001</td><td>0.704 ± 0.001</td><td>0.686 ± 0.001</td><td><u>0.719</u> ± 0.000</td><td>0.732 ± 0.001</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">V</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">25%</td><td>MAE</td><td>1.721 ± 0.001</td><td>1.371 ± 0.001</td><td>0.999 ± 0.001</td><td>0.963 ± 0.001</td><td>0.991 ± 0.000</td><td><u>0.944</u> ± 0.001</td><td>0.906 ± 0.001</td></tr>
-    <tr><td>R²</td><td>0.130 ± 0.001</td><td>0.410 ± 0.001</td><td>0.674 ± 0.000</td><td>0.689 ± 0.001</td><td>0.675 ± 0.000</td><td><u>0.705</u> ± 0.001</td><td>0.720 ± 0.000</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">V</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">50%</td><td>MAE</td><td>1.719 ± 0.001</td><td>1.370 ± 0.000</td><td>1.080 ± 0.001</td><td>1.026 ± 0.001</td><td>1.055 ± 0.001</td><td><u>1.016</u> ± 0.001</td><td>0.990 ± 0.006</td></tr>
-    <tr><td>R²</td><td>0.130 ± 0.001</td><td>0.410 ± 0.001</td><td>0.622 ± 0.001</td><td>0.650 ± 0.000</td><td>0.635 ± 0.001</td><td><u>0.660</u> ± 0.001</td><td>0.675 ± 0.003</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">V</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">75%</td><td>MAE</td><td>1.720 ± 0.000</td><td>1.370 ± 0.001</td><td>1.268 ± 0.003</td><td><u>1.077</u> ± 0.001</td><td>1.098 ± 0.001</td><td>1.088 ± 0.003</td><td>1.060 ± 0.001</td></tr>
-    <tr><td>R²</td><td>0.131 ± 0.000</td><td>0.410 ± 0.001</td><td>0.483 ± 0.001</td><td>0.599 ± 0.001</td><td>0.584 ± 0.001</td><td><u>0.605</u> ± 0.002</td><td>0.620 ± 0.001</td></tr>
-    <tr><td rowspan="8" style="border: 1px solid #ddd; padding: 4px;">California</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">T</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">12.5%</td><td>MAE</td><td>2.825 ± 0.002</td><td>1.437 ± 0.002</td><td>0.658 ± 0.002</td><td>0.567 ± 0.001</td><td>0.583 ± 0.001</td><td><u>0.546</u> ± 0.000</td><td>0.513 ± 0.002</td></tr>
-    <tr><td>R²</td><td>0.764 ± 0.000</td><td>0.921 ± 0.000</td><td>0.983 ± 0.000</td><td>0.986 ± 0.000</td><td>0.986 ± 0.000</td><td><u>0.987</u> ± 0.000</td><td>0.989 ± 0.000</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">T</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">25%</td><td>MAE</td><td>2.823 ± 0.002</td><td>1.438 ± 0.001</td><td>0.730 ± 0.003</td><td>0.588 ± 0.000</td><td>0.602 ± 0.000</td><td><u>0.578</u> ± 0.000</td><td>0.565 ± 0.019</td></tr>
-    <tr><td>R²</td><td>0.764 ± 0.000</td><td>0.921 ± 0.000</td><td>0.980 ± 0.000</td><td>0.985 ± 0.000</td><td>0.985 ± 0.000</td><td><u>0.986</u> ± 0.000</td><td>0.987 ± 0.001</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">T</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">50%</td><td>MAE</td><td>2.825 ± 0.000</td><td>1.438 ± 0.001</td><td>0.913 ± 0.001</td><td>0.663 ± 0.000</td><td><u>0.682</u> ± 0.001</td><td>0.697 ± 0.002</td><td>0.718 ± 0.022</td></tr>
-    <tr><td>R²</td><td>0.764 ± 0.000</td><td>0.921 ± 0.000</td><td>0.969 ± 0.000</td><td>0.981 ± 0.000</td><td><u>0.980</u> ± 0.000</td><td><u>0.980</u> ± 0.000</td><td>0.979 ± 0.001</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">T</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">75%</td><td>MAE</td><td>2.824 ± 0.000</td><td>1.438 ± 0.001</td><td>2.323 ± 0.082</td><td><u>0.926</u> ± 0.003</td><td>1.002 ± 0.002</td><td>0.994 ± 0.045</td><td>0.833 ± 0.006</td></tr>
-    <tr><td>R²</td><td>0.764 ± 0.000</td><td>0.921 ± 0.000</td><td>0.833 ± 0.012</td><td><u>0.965</u> ± 0.000</td><td>0.961 ± 0.000</td><td>0.962 ± 0.003</td><td>0.972 ± 0.000</td></tr>
-    <tr><td rowspan="8" style="border: 1px solid #ddd; padding: 4px;">California</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">P</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">12.5%</td><td>MAE</td><td>1.156 ± 0.001</td><td>0.521 ± 0.002</td><td>0.232 ± 0.001</td><td>0.184 ± 0.000</td><td>0.187 ± 0.000</td><td><u>0.155</u> ± 0.001</td><td>0.141 ± 0.001</td></tr>
-    <tr><td>R²</td><td>0.924 ± 0.000</td><td>0.974 ± 0.000</td><td>0.995 ± 0.000</td><td>0.996 ± 0.000</td><td>0.996 ± 0.000</td><td><u>0.997</u> ± 0.000</td><td>0.998 ± 0.000</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">P</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">25%</td><td>MAE</td><td>1.156 ± 0.001</td><td>0.522 ± 0.001</td><td>0.265 ± 0.002</td><td>0.191 ± 0.000</td><td>0.198 ± 0.001</td><td><u>0.169</u> ± 0.000</td><td>0.159 ± 0.001</td></tr>
-    <tr><td>R²</td><td>0.924 ± 0.000</td><td>0.974 ± 0.000</td><td>0.993 ± 0.000</td><td>0.996 ± 0.000</td><td>0.995 ± 0.000</td><td>0.997 ± 0.000</td><td>0.997 ± 0.000</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">P</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">50%</td><td>MAE</td><td>1.156 ± 0.001</td><td>0.522 ± 0.001</td><td>0.350 ± 0.001</td><td><u>0.215</u> ± 0.000</td><td>0.232 ± 0.001</td><td>0.218 ± 0.002</td><td>0.212 ± 0.005</td></tr>
-    <tr><td>R²</td><td>0.924 ± 0.000</td><td>0.974 ± 0.000</td><td>0.988 ± 0.000</td><td>0.995 ± 0.000</td><td>0.993 ± 0.000</td><td>0.995 ± 0.000</td><td>0.995 ± 0.000</td></tr>
-    <tr><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">P</td><td rowspan="2" style="border: 1px solid #ddd; padding: 4px;">75%</td><td>MAE</td><td>1.156 ± 0.000</td><td>0.522 ± 0.001</td><td>1.215 ± 0.027</td><td>0.334 ± 0.001</td><td><u>0.389</u> ± 0.003</td><td>1.040 ± 0.162</td><td>0.417 ± 0.014</td></tr>
-    <tr><td>R²</td><td>0.924 ± 0.000</td><td>0.974 ± 0.000</td><td>0.865 ± 0.006</td><td>0.988 ± 0.000</td><td>0.984 ± 0.001</td><td>0.918 ± 0.023</td><td><u>0.985</u> ± 0.001</td></tr>
-  </tbody>
-</table>
-</div>
+| Dataset   | Var. | Missing rate | Metric | OK            | LR            | Autoformer    | NS-Trans               | TimesNet               | MPNN                         | RAMP-Net (Ours)              |
+| --------- | ---- | ------------ | ------ | ------------- | ------------- | ------------- | ---------------------- | ---------------------- | ---------------------------- | ---------------------------- |
+| Guangdong | U    | 12.5%        | MAE    | 1.237 ± 0.002 | 1.074 ± 0.002 | 0.556 ± 0.002 | 0.526 ± 0.001          | <u>0.498</u> ± 0.004    | <u>0.491</u> ± 0.002         | **0.372** ± 0.005            |
+| Guangdong | U    | 12.5%        | $R^2$  | 0.074 ± 0.002 | 0.259 ± 0.002 | 0.696 ± 0.002 | 0.702 ± 0.003          | 0.727 ± 0.004          | <u>0.743</u> ± 0.002         | **0.819** ± 0.003            |
+| Guangdong | U    | 25%          | MAE    | 1.238 ± 0.001 | 1.077 ± 0.002 | 0.593 ± 0.002 | 0.573 ± 0.001          | <u>0.526</u> ± 0.002    | 0.534 ± 0.001                | **0.419** ± 0.002            |
+| Guangdong | U    | 25%          | $R^2$  | 0.075 ± 0.000 | 0.258 ± 0.001 | 0.668 ± 0.003 | 0.673 ± 0.002          | 0.710 ± 0.001          | <u>0.713</u> ± 0.002         | **0.788** ± 0.002            |
+| Guangdong | U    | 50%          | MAE    | 1.238 ± 0.001 | 1.076 ± 0.001 | 0.694 ± 0.003 | 0.670 ± 0.002          | <u>0.641</u> ± 0.002    | 0.649 ± 0.001                | **0.574** ± 0.003            |
+| Guangdong | U    | 50%          | $R^2$  | 0.073 ± 0.001 | 0.258 ± 0.001 | 0.580 ± 0.003 | 0.600 ± 0.001          | <u>0.615</u> ± 0.002    | 0.607 ± 0.001                | **0.668** ± 0.005            |
+| Guangdong | U    | 75%          | MAE    | 1.237 ± 0.000 | 1.076 ± 0.001 | 0.908 ± 0.001 | 0.801 ± 0.001          | <u>0.779</u> ± 0.001    | 0.826 ± 0.001                | **0.718** ± 0.003            |
+| Guangdong | U    | 75%          | $R^2$  | 0.074 ± 0.001 | 0.257 ± 0.001 | 0.415 ± 0.001 | 0.500 ± 0.001          | <u>0.520</u> ± 0.001    | 0.482 ± 0.001                | **0.561** ± 0.003            |
+| Guangdong | V    | 12.5%        | MAE    | 1.350 ± 0.002 | 1.161 ± 0.003 | 0.570 ± 0.003 | 0.554 ± 0.004          | 0.495 ± 0.005          | <u>0.478</u> ± 0.003         | **0.368** ± 0.004            |
+| Guangdong | V    | 12.5%        | $R^2$  | 0.145 ± 0.002 | 0.365 ± 0.003 | 0.777 ± 0.001 | 0.764 ± 0.005          | 0.809 ± 0.004          | <u>0.833</u> ± 0.003         | **0.872** ± 0.003            |
+| Guangdong | V    | 25%          | MAE    | 1.351 ± 0.001 | 1.161 ± 0.002 | 0.634 ± 0.005 | 0.620 ± 0.002          | <u>0.543</u> ± 0.002    | 0.546 ± 0.002                | **0.440** ± 0.004            |
+| Guangdong | V    | 25%          | $R^2$  | 0.143 ± 0.002 | 0.363 ± 0.002 | 0.726 ± 0.004 | 0.719 ± 0.002          | 0.771 ± 0.001          | <u>0.786</u> ± 0.002         | **0.826** ± 0.002            |
+| Guangdong | V    | 50%          | MAE    | 1.350 ± 0.001 | 1.160 ± 0.002 | 0.768 ± 0.002 | 0.741 ± 0.001          | <u>0.689</u> ± 0.002    | 0.691 ± 0.002                | **0.626** ± 0.005            |
+| Guangdong | V    | 50%          | $R^2$  | 0.144 ± 0.002 | 0.363 ± 0.001 | 0.624 ± 0.002 | 0.636 ± 0.002          | 0.665 ± 0.002          | <u>0.680</u> ± 0.002         | **0.707** ± 0.002            |
+| Guangdong | V    | 75%          | MAE    | 1.350 ± 0.000 | 1.160 ± 0.000 | 1.026 ± 0.003 | 0.900 ± 0.001          | <u>0.864</u> ± 0.002    | 0.927 ± 0.013                | **0.782** ± 0.002            |
+| Guangdong | V    | 75%          | $R^2$  | 0.144 ± 0.001 | 0.364 ± 0.002 | 0.462 ± 0.003 | 0.534 ± 0.001          | <u>0.565</u> ± 0.002    | 0.525 ± 0.008                | **0.613** ± 0.001            |
+| Guangdong | T    | 12.5%        | MAE    | 1.439 ± 0.001 | 1.056 ± 0.002 | 0.304 ± 0.003 | 0.205 ± 0.001          | <u>0.161</u> ± 0.001    | 0.216 ± 0.000                | **0.143** ± 0.001            |
+| Guangdong | T    | 12.5%        | $R^2$  | 0.891 ± 0.000 | 0.922 ± 0.001 | 0.994 ± 0.000 | <u>0.996</u> ± 0.000   | **0.997** ± 0.000       | <u>0.996</u> ± 0.000         | **0.997** ± 0.000            |
+| Guangdong | T    | 25%          | MAE    | 1.441 ± 0.002 | 1.056 ± 0.002 | 0.361 ± 0.004 | <u>0.223</u> ± 0.001   | **0.182** ± 0.000       | 0.256 ± 0.001                | 0.197 ± 0.008                |
+| Guangdong | T    | 25%          | $R^2$  | 0.891 ± 0.000 | 0.922 ± 0.000 | 0.993 ± 0.000 | <u>0.996</u> ± 0.000   | **0.997** ± 0.000       | 0.995 ± 0.000                | **0.997** ± 0.000            |
+| Guangdong | T    | 50%          | MAE    | 1.442 ± 0.001 | 1.057 ± 0.001 | 0.502 ± 0.003 | <u>0.303</u> ± 0.001   | **0.268** ± 0.000       | 0.381 ± 0.001                | 0.336 ± 0.015                |
+| Guangdong | T    | 50%          | $R^2$  | 0.891 ± 0.000 | 0.922 ± 0.001 | 0.987 ± 0.000 | **0.994** ± 0.000      | **0.994** ± 0.000       | 0.992 ± 0.000                | <u>0.993</u> ± 0.001         |
+| Guangdong | T    | 75%          | MAE    | 1.442 ± 0.001 | 1.057 ± 0.001 | 1.645 ± 0.048 | <u>0.599</u> ± 0.002   | 0.639 ± 0.005          | 0.938 ± 0.262                | **0.470** ± 0.004            |
+| Guangdong | T    | 75%          | $R^2$  | 0.891 ± 0.000 | 0.922 ± 0.001 | 0.862 ± 0.012 | <u>0.983</u> ± 0.000   | 0.982 ± 0.000          | 0.963 ± 0.022                | **0.988** ± 0.000            |
+| Guangdong | P    | 12.5%        | MAE    | 0.580 ± 0.001 | 0.394 ± 0.002 | 0.171 ± 0.003 | 0.109 ± 0.001          | 0.066 ± 0.001          | <u>0.058</u> ± 0.000         | **0.048** ± 0.003            |
+| Guangdong | P    | 12.5%        | $R^2$  | 0.983 ± 0.000 | 0.988 ± 0.000 | <u>0.999</u> ± 0.000   | <u>0.999</u> ± 0.000   | **1.000** ± 0.000       | **1.000** ± 0.000            | **1.000** ± 0.000            |
+| Guangdong | P    | 25%          | MAE    | 0.580 ± 0.001 | 0.393 ± 0.001 | 0.201 ± 0.002 | 0.113 ± 0.000          | **0.079** ± 0.000       | 0.084 ± 0.000                | <u>0.081</u> ± 0.007         |
+| Guangdong | P    | 25%          | $R^2$  | 0.983 ± 0.000 | 0.988 ± 0.000 | 0.998 ± 0.000 | <u>0.999</u> ± 0.000   | **1.000** ± 0.000       | **1.000** ± 0.000            | **1.000** ± 0.000            |
+| Guangdong | P    | 50%          | MAE    | 0.581 ± 0.000 | 0.394 ± 0.001 | 0.277 ± 0.002 | 0.147 ± 0.001          | **0.127** ± 0.000       | 0.161 ± 0.002                | <u>0.143</u> ± 0.008         |
+| Guangdong | P    | 50%          | $R^2$  | 0.983 ± 0.000 | 0.988 ± 0.000 | 0.997 ± 0.000 | **0.999** ± 0.000      | **0.999** ± 0.000       | **0.999** ± 0.000            | **0.999** ± 0.000            |
+| Guangdong | P    | 75%          | MAE    | 0.581 ± 0.000 | 0.394 ± 0.001 | 1.799 ± 0.119 | **0.302** ± 0.001      | <u>0.314</u> ± 0.005    | 0.683 ± 0.098                | 0.388 ± 0.019                |
+| Guangdong | P    | 75%          | $R^2$  | 0.983 ± 0.000 | 0.988 ± 0.000 | 0.853 ± 0.019 | **0.996** ± 0.000      | 0.993 ± 0.001          | 0.985 ± 0.004                | <u>0.994</u> ± 0.000         |
+| California| U    | 12.5%        | MAE    | 1.603 ± 0.002 | 1.327 ± 0.003 | 0.984 ± 0.002 | 0.944 ± 0.002          | 0.978 ± 0.002          | <u>0.927</u> ± 0.002         | **0.890** ± 0.002            |
+| California| U    | 12.5%        | $R^2$  | 0.228 ± 0.001 | 0.422 ± 0.001 | 0.670 ± 0.001 | 0.689 ± 0.001          | 0.670 ± 0.001          | <u>0.702</u> ± 0.001         | **0.715** ± 0.001            |
+| California| U    | 25%          | MAE    | 1.603 ± 0.001 | 1.329 ± 0.001 | 1.009 ± 0.001 | 0.971 ± 0.000          | 0.999 ± 0.001          | <u>0.954</u> ± 0.001         | **0.914** ± 0.001            |
+| California| U    | 25%          | $R^2$  | 0.229 ± 0.002 | 0.421 ± 0.001 | 0.653 ± 0.001 | 0.673 ± 0.001          | 0.657 ± 0.001          | <u>0.686</u> ± 0.000         | **0.703** ± 0.001            |
+| California| U    | 50%          | MAE    | 1.602 ± 0.001 | 1.328 ± 0.001 | 1.090 ± 0.000 | 1.029 ± 0.001          | 1.061 ± 0.001          | <u>1.022</u> ± 0.001         | **0.998** ± 0.002            |
+| California| U    | 50%          | $R^2$  | 0.229 ± 0.001 | 0.422 ± 0.001 | 0.601 ± 0.001 | 0.636 ± 0.001          | 0.616 ± 0.001          | <u>0.643</u> ± 0.001         | **0.657** ± 0.001            |
+| California| U    | 75%          | MAE    | 1.603 ± 0.000 | 1.328 ± 0.000 | 1.219 ± 0.003 | <u>1.084</u> ± 0.001   | 1.104 ± 0.001          | 1.092 ± 0.002                | **1.043** ± 0.002            |
+| California| U    | 75%          | $R^2$  | 0.229 ± 0.001 | 0.421 ± 0.001 | 0.499 ± 0.003 | 0.583 ± 0.001          | 0.569 ± 0.002          | <u>0.593</u> ± 0.001         | **0.614** ± 0.002            |
+| California| V    | 12.5%        | MAE    | 1.719 ± 0.002 | 1.370 ± 0.002 | 0.977 ± 0.001 | 0.936 ± 0.001          | 0.971 ± 0.001          | <u>0.918</u> ± 0.001         | **0.882** ± 0.001            |
+| California| V    | 12.5%        | $R^2$  | 0.130 ± 0.003 | 0.410 ± 0.001 | 0.686 ± 0.001 | 0.704 ± 0.001          | 0.686 ± 0.001          | <u>0.719</u> ± 0.000         | **0.732** ± 0.001            |
+| California| V    | 25%          | MAE    | 1.721 ± 0.001 | 1.371 ± 0.001 | 0.999 ± 0.001 | 0.963 ± 0.001          | 0.991 ± 0.000          | <u>0.944</u> ± 0.001         | **0.906** ± 0.001            |
+| California| V    | 25%          | $R^2$  | 0.130 ± 0.001 | 0.410 ± 0.001 | 0.674 ± 0.000 | 0.689 ± 0.001          | 0.675 ± 0.000          | <u>0.705</u> ± 0.001         | **0.720** ± 0.000            |
+| California| V    | 50%          | MAE    | 1.719 ± 0.001 | 1.370 ± 0.000 | 1.080 ± 0.001 | 1.026 ± 0.001          | 1.055 ± 0.001          | <u>1.016</u> ± 0.001         | **0.990** ± 0.006            |
+| California| V    | 50%          | $R^2$  | 0.130 ± 0.001 | 0.410 ± 0.001 | 0.622 ± 0.001 | 0.650 ± 0.000          | 0.635 ± 0.001          | <u>0.660</u> ± 0.001         | **0.675** ± 0.003            |
+| California| V    | 75%          | MAE    | 1.720 ± 0.000 | 1.370 ± 0.001 | 1.268 ± 0.003 | <u>1.077</u> ± 0.001   | 1.098 ± 0.001          | 1.088 ± 0.003                | **1.060** ± 0.001            |
+| California| V    | 75%          | $R^2$  | 0.131 ± 0.000 | 0.410 ± 0.001 | 0.483 ± 0.001 | 0.599 ± 0.001          | 0.584 ± 0.001          | <u>0.605</u> ± 0.002         | **0.620** ± 0.001            |
+| California| T    | 12.5%        | MAE    | 2.825 ± 0.002 | 1.437 ± 0.002 | 0.658 ± 0.002 | 0.567 ± 0.001          | 0.583 ± 0.001          | <u>0.546</u> ± 0.000         | **0.513** ± 0.002            |
+| California| T    | 12.5%        | $R^2$  | 0.764 ± 0.000 | 0.921 ± 0.000 | 0.983 ± 0.000 | 0.986 ± 0.000          | 0.986 ± 0.000          | <u>0.987</u> ± 0.000         | **0.989** ± 0.000            |
+| California| T    | 25%          | MAE    | 2.823 ± 0.002 | 1.438 ± 0.001 | 0.730 ± 0.003 | 0.588 ± 0.000          | 0.602 ± 0.000          | <u>0.578</u> ± 0.000         | **0.565** ± 0.019            |
+| California| T    | 25%          | $R^2$  | 0.764 ± 0.000 | 0.921 ± 0.000 | 0.980 ± 0.000 | 0.985 ± 0.000          | 0.985 ± 0.000          | <u>0.986</u> ± 0.000         | **0.987** ± 0.001            |
+| California| T    | 50%          | MAE    | 2.825 ± 0.000 | 1.438 ± 0.001 | 0.913 ± 0.001 | **0.663** ± 0.000      | <u>0.682</u> ± 0.001    | 0.697 ± 0.002                | 0.718 ± 0.022                |
+| California| T    | 50%          | $R^2$  | 0.764 ± 0.000 | 0.921 ± 0.000 | 0.969 ± 0.000 | **0.981** ± 0.000      | <u>0.980</u> ± 0.000    | <u>0.980</u> ± 0.000         | 0.979 ± 0.001                |
+| California| T    | 75%          | MAE    | 2.824 ± 0.000 | 1.438 ± 0.001 | 2.323 ± 0.082 | <u>0.926</u> ± 0.003   | 1.002 ± 0.002          | 0.994 ± 0.045                | **0.833** ± 0.006            |
+| California| T    | 75%          | $R^2$  | 0.764 ± 0.000 | 0.921 ± 0.000 | 0.833 ± 0.012 | <u>0.965</u> ± 0.000   | 0.961 ± 0.000          | 0.962 ± 0.003                | **0.972** ± 0.000            |
+| California| P    | 12.5%        | MAE    | 1.156 ± 0.001 | 0.521 ± 0.002 | 0.232 ± 0.001 | 0.184 ± 0.000          | 0.187 ± 0.000          | <u>0.155</u> ± 0.001         | **0.141** ± 0.001            |
+| California| P    | 12.5%        | $R^2$  | 0.924 ± 0.000 | 0.974 ± 0.000 | 0.995 ± 0.000 | 0.996 ± 0.000          | 0.996 ± 0.000          | <u>0.997</u> ± 0.000         | **0.998** ± 0.000            |
+| California| P    | 25%          | MAE    | 1.156 ± 0.001 | 0.522 ± 0.001 | 0.265 ± 0.002 | 0.191 ± 0.000          | 0.198 ± 0.001          | <u>0.169</u> ± 0.000         | **0.159** ± 0.001            |
+| California| P    | 25%          | $R^2$  | 0.924 ± 0.000 | 0.974 ± 0.000 | 0.993 ± 0.000 | 0.996 ± 0.000          | 0.995 ± 0.000          | **0.997** ± 0.000            | **0.997** ± 0.000            |
+| California| P    | 50%          | MAE    | 1.156 ± 0.001 | 0.522 ± 0.001 | 0.350 ± 0.001 | <u>0.215</u> ± 0.000   | 0.232 ± 0.001          | 0.218 ± 0.002                | **0.212** ± 0.005            |
+| California| P    | 50%          | $R^2$  | 0.924 ± 0.000 | 0.974 ± 0.000 | 0.988 ± 0.000 | **0.995** ± 0.000      | 0.993 ± 0.000          | **0.995** ± 0.000            | **0.995** ± 0.000            |
+| California| P    | 75%          | MAE    | 1.156 ± 0.000 | 0.522 ± 0.001 | 1.215 ± 0.027 | **0.334** ± 0.001      | <u>0.389</u> ± 0.003    | 1.040 ± 0.162                | 0.417 ± 0.014                |
+| California| P    | 75%          | $R^2$  | 0.924 ± 0.000 | 0.974 ± 0.000 | 0.865 ± 0.006 | **0.988** ± 0.000      | 0.984 ± 0.001          | 0.918 ± 0.023                | <u>0.985</u> ± 0.001         |
 ### Table 2: Quantitative evaluation on the MeteoNet dataset
 | Type | Model | CSI 12 | CSI 24 | CSI 32 | CSI Avg | HSS 12 | HSS 24 | HSS 32 | HSS Avg | MSE | MAE | PSNR | SSIM |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
