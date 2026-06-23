@@ -18,7 +18,7 @@ This repository contains the official implementation of **RAMP-Net**, a novel re
 ### 🏗️ Model Architecture
 [//]: # "![Model Architecture]&#40;docs/Overall Framework.png&#41;"
 <p align="center">
-  <img src="docs/Overall Framework.png" width="900" alt="Model Architecture">
+  <img src="code/docs/Overall Framework.png" width="900" alt="Model Architecture">
 </p>
 
 
