@@ -1,6 +1,6 @@
 # data_provider.py
 
-from data_provider.data_loader import Dataset_Custom_l,Dataset_Custom_0,Dataset_Custom_s0
+from data_provider.data_loader import Dataset_Custom_0,Dataset_Custom_s0
 from torch.utils.data import DataLoader
 from torch import Generator
 import numpy as np
@@ -9,7 +9,6 @@ import os
 import random
 
 data_dict = {
-    'customl': Dataset_Custom_l,
     'custom0': Dataset_Custom_0,
     'customs0':Dataset_Custom_s0
 }
